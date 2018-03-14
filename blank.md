@@ -47,17 +47,15 @@ For each message you publish:
 
 - Neogtiatied idle-timeout
 
-- For each sender link in use:
-  - disposition mode:
-    - settle-on-send
-    - settle-on-dispose
-    - mixed
+- For each link in use:
+  - sender settle mode:
+    - `0` (unsettled)
+    - `1` (settled)
+    - `2` (mixed)
 
-- For each receiver link in use:
-  - disposition mode:
-    - settle-on-send
-    - settle-on-dispose
-    - mixed
+  - receiver settle mode:
+    - `0` (first / automatically settle)
+    - `1` (second / settle on disposition)
 
 #### Reference:
 - [AMQP 1.0 Specification](http://www.amqp.org/resources/download)
@@ -69,6 +67,14 @@ For each message you publish:
 
 - For each type of request:
   - timeout:
+
+
+### Websockets
+- Ping interval:
+- Pong interval: (can be used as a reply to ping or as a unidirectional heartbeat)
+
+#### Reference:
+https://tools.ietf.org/html/rfc6455#section-5.5.2
 
 ## Device application specific
 
